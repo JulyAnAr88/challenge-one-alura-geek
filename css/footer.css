@@ -1,0 +1,75 @@
+.footer{
+    background-color: var(--bg-color-2);
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+}
+
+.footer__logo-info{
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+text-align: center;
+line-height: 1.5rem;
+width: 290px;
+
+}
+.footer img{
+    width: 50%;
+}
+.info__listas{
+    gap:1rem;
+}
+.info__link{
+    color: var(--text-color);
+    font-weight: 500;
+line-height: 19px;
+}
+
+.footer__form{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 8px;
+align-self: stretch;
+flex-grow: 0;
+}
+
+.footer__titulo{
+    font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+
+}
+
+.footer__input{
+    width: 100%;
+    font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 0.8rem;
+line-height: 1rem;
+
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+}
+
+.footer__boton{
+    border: none;
+    color: var(--bg-color);
+    background-color: var(--link-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.5rem;
+    flex: none;
+    width: 40%;
+    height: 40px;
+}
