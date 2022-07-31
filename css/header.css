@@ -1,0 +1,38 @@
+.header{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 2.5rem;
+
+    /* Preto/branco */
+    background: var(--bg-color);
+
+    /* Inside auto layout */
+    flex: none;
+    
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.header img{
+    order: -2;
+    width: 30%;
+}
+
+.form__boton{
+    order: 0;
+    border: none;
+    background: none;
+    padding: 1rem;
+}
+
+.header__link-boton{
+    order: -1;
+}
+.header__boton{
+    color: var(--link-color);
+    border: 1px solid  var(--link-color);
+}
