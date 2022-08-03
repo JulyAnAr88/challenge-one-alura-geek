@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  
+    width:92%;
     height: 2.5rem;
 
     /* Preto/branco */
@@ -30,6 +30,7 @@
 }
 
 .header__link-boton{
+    display: block;
     order: -1;
 }
 .header__boton{

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/inicio-sesion.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -21,25 +22,25 @@
 <body>
     <!-- Sección del Menú  -->
     <header class="header container section">
-            <img class="header__logo" src="img/Logo.png" alt="Logo Alura">
+            <img class="header__logo" onclick= "location.href='index.html'" src="img/Logo.png" alt="Logo Alura">
             <form action="" class="header__form">
                 <input class="header__busqueda none" type="text" name="search" autocomplete="off" placeholder="¿Que desea buscar?">
                 <a href="" class="form__boton"><i class="fa-solid fa-magnifying-glass"></i></a>
             </form>
-        <a class="header__link-boton" href="inicio-sesion.html"><button class="header__boton">Login</button></a> 
+        <a class="header__link-boton"><button class="header__boton" onclick= "pageChandler('.section_3'), hiddeElement('.header__link-boton',false)">Login</button></a> 
     </header>
     <main>
     <!-- Sección del Home -->
-    <section class="banner container">
+    <section class="section_2 banner container">
         <article class="banner__image section" style="--banner-image: url('../img/banner-image.png');">
             <div class="banner__contenido">
                 <h1 class="banner__titulo">Febrero Promocional</h1>
                 <p class="banner__parrafo">Productos seleccionados con 33% de descuento</p>
-                <a href=""><button class="banner__boton">Ver consolas</button></a> 
+                <a href="#consolas"><button class="banner__boton">Ver consolas</button></a> 
             </div>
         </article>
     </section>
-    <section class="productos container section">
+    <section class="section_1 productos container section">
         <div class=" productos__star-wars productos__areas">
             <div class="productos__titulos">
                 <h2 class="productos__titulo">Star Wars</h2>
@@ -100,7 +101,7 @@
 
         <div class=" productos__consolas productos__areas">
             <div class="productos__titulos">
-                <h2 class="productos__titulo">Consolas</h2>
+                <h2 class="productos__titulo" id="consolas">Consolas</h2>
                 <a class="productos__ver" href="">Ver todo &#10140;</a>
             </div>
             <ul class="productos__contenido">
@@ -212,6 +213,22 @@
             </ul>
         </div>
     </section>
+    <form action="" class="section_3 section" style="display:none">
+        <div class="form__container">
+            <h3>Iniciar Sesión</h3>
+                    <div class="formlogin__form__container">
+                        <input class="formlogin__input" name="email" id="email" type="email" placeholder="Escriba su correo electronico" required data-tipo="email">
+                        <span class="input-message-error">Este campo no es valido</span>
+                    </div>
+                    <div class="formlogin__form__container">
+                        <input class="formlogin__password"  name="password" id="password" type="password" placeholder="Escriba su contraseña" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales." data-tipo="password"></input>
+                        <span class="input-message-error">Este campo no es valido</span>
+                    </div>
+            <input type="submit" class="form__submit" value="Entrar">            
+        </div>
+    </form>
+
+
     <footer class="footer section">
         <div class="footer__logo-info">
             <div class="info__img">
@@ -245,5 +262,7 @@
             <p>&copy Copyright Julián Aragón - 2022</p>            
         </div>
     </main>
+
+    <script src = "js/main.js"></script>
 </body>
 </html>
