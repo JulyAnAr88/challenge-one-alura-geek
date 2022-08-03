@@ -139,3 +139,12 @@ height: 249px;
     }
 
 }
+
+@media screen and (min-width: 1024px) {
+    .banner{
+        padding-top: 6.5rem;
+    }
+    .productos__listas-off{
+        display: flex;
+    }
+}

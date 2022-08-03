@@ -3,3 +3,30 @@
         padding: 2rem;
       }
 }
+
+@media screen and (min-width: 1024px) {
+    .section {
+        padding: 1.5rem 5rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 61px;
+        height: 61px;
+      }
+
+      p {
+        font-weight: 700;
+        line-height: 1.8rem;
+        font-size: 1.4rem;
+      }
+
+      .rodapie p{
+        font-weight: 300;
+        line-height: 1rem;
+        font-size: 1rem;
+      }
+
+}

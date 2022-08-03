@@ -8,7 +8,7 @@ gap: 16px;
 }
 
 .footer li{
-    margin: 1rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 .footer__logo-info{
@@ -20,9 +20,6 @@ text-align: center;
 line-height: 1.5rem;
 width: 290px;
 
-}
-.footer img{
-    width: 50%;
 }
 .info__listas{
     gap:1rem;
@@ -111,12 +108,31 @@ line-height: 19px;
         text-align: start;
         padding: 0px;
         
-        width: 254px;
-    
+        width: 254px;    
     }
 
     .footer__form{
         width: 65%;
     }
     
+}
+
+@media screen and (min-width: 1024px) {
+    .footer{
+        gap: 110px; 
+    }
+    
+    .footer__logo-info{
+        flex-direction: row;  
+        width: 750px;
+        gap:50px
+    }
+
+    .info__img{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+
 }
