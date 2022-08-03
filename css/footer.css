@@ -7,6 +7,10 @@ align-items: center;
 gap: 16px;
 }
 
+.footer li{
+    margin: 1rem 0;
+}
+
 .footer__logo-info{
     display: flex;
 flex-direction: column;
@@ -27,37 +31,58 @@ width: 290px;
     color: var(--text-color);
     font-weight: 500;
 line-height: 19px;
+    padding: 0.5rem 0;
 }
 
-.footer__form{
+.formcontact__form{
     display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 8px;
-align-self: stretch;
-flex-grow: 0;
-}
-
-.footer__titulo{
-    font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-
-}
-
-.footer__input{
+    flex-direction: column;
     width: 100%;
-    font-family: 'Raleway';
-font-style: normal;
-font-weight: 400;
-font-size: 0.8rem;
-line-height: 1rem;
+}
+.formcontact__form__container{
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+.formcontact__label{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.formcontact__input{
+    background: var(--bg-color);
+    border-radius: 4px;
+    border: none;
+    height: 50px; 
+}
+#nombre::placeholder{
+    color: var(--letter-shadow);
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+    position: absolute;
+}
+.formcontact__textarea{
+    color: var(--letter-shadow);
+    background: var(--bg-color);
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    height: 85px;
+    margin: 15px 0;
+}
+.formcontact__textarea::placeholder{
+    color: var(--letter-shadow);
+    font-size: 16px;
+    padding: 5px;
+}
 
-/* identical to box height, or 133% */
-display: flex;
-align-items: center;
+.formcontacto__boton:hover{
+    color: black;
+    background-color: var(--gray-dark-color);
+}
+.input-message-error{
+    display: none;
 }
 
 .footer__boton{
@@ -72,4 +97,26 @@ align-items: center;
     flex: none;
     width: 40%;
     height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer__logo-info{
+        align-items: flex-start;
+        text-align: start;
+        padding: 0px;
+        
+        width: 254px;
+    
+    }
+
+    .footer__form{
+        width: 65%;
+    }
+    
 }

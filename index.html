@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="fa-regular fa-gamepad-modern" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1d27770728.js" crossorigin="anonymous"></script>
     
     <title>AluraGeek</title>
 </head>
@@ -22,24 +24,22 @@
             <img class="header__logo" src="img/Logo.png" alt="Logo Alura">
             <form action="" class="header__form">
                 <input class="header__busqueda none" type="text" name="search" autocomplete="off" placeholder="¿Que desea buscar?">
-                <button class="form__boton"><i class="bi bi-search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                  </svg></i></button>
+                <a href="" class="form__boton"><i class="fa-solid fa-magnifying-glass"></i></a>
             </form>
         <a class="header__link-boton" href="inicio-sesion.html"><button class="header__boton">Login</button></a> 
     </header>
     <main>
     <!-- Sección del Home -->
     <section class="banner container">
-        <article class="banner__image" style="--banner-image: url('../img/banner-image.png');">
-            <div class="banner__contenido section">
+        <article class="banner__image section" style="--banner-image: url('../img/banner-image.png');">
+            <div class="banner__contenido">
                 <h1 class="banner__titulo">Febrero Promocional</h1>
                 <p class="banner__parrafo">Productos seleccionados con 33% de descuento</p>
                 <a href=""><button class="banner__boton">Ver consolas</button></a> 
             </div>
         </article>
     </section>
-    <section class="productos container">
+    <section class="productos container section">
         <div class=" productos__star-wars productos__areas">
             <div class="productos__titulos">
                 <h2 class="productos__titulo">Star Wars</h2>
@@ -224,10 +224,16 @@
                 <li><a class="info__link"  href="">Anuncie aquí</a></li>
             </ul>
         </div>
-        <form class="footer__form" action="">
-            <h3 class="footer__titulo">Hable con nosotros</h3>
-            <input class="footer__input" type="text" name="name" placeholder="Nombre" autocomplete="off" >
-            <textarea class="footer__input" type="text" placeholder="Escribe tu mensaje" rows="5" autocomplete="off" ></textarea>
+        <form class="formcontact__form" name="form" action="">
+            <div class="formcontact__form__container">
+                <label class="formcontact__label" for="#">Hable con nosotros</label>
+                <input class="formcontact__input" id="nombre" type="text" name="nombre" placeholder="Nombre" required pattern="[\s\S]{0,50}" data-tipo="name" maxlength="">
+                <span class="input-message-error">Este campo no es valido</span>
+            </div>
+            <div class="formcontact__form__container">
+                <textarea class="formcontact__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Escribe tu mensaje" required pattern="[\s\S]{0,300}" data-tipo="mensaje" maxlength="50"></textarea>
+                <span class="input-message-error">Este campo no es valido</span>
+            </div>
             <input class="footer__boton" type="submit">
         </form>
         </footer>
